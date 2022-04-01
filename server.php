@@ -36,12 +36,6 @@
         .album span{
             height: calc(25% / 3)
         }
-
-.album span{
-    color: silver;
-    font-size: 14px;
-    padding: 5px 0px;
-}
     </style>
 </head>
 <body>
@@ -64,7 +58,7 @@
                 </h5>
                 <span>
                     <?php
-                         echo $value['author'];
+                        echo $value['author'];
                     ?>
                 </span>
                 <span>
