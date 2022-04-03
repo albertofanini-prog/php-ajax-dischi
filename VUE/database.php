@@ -71,11 +71,4 @@
         'year' => '1987'
         ]
     ];
-
-    // include_once __DIR__ . '/index.php';
-
-    // header('Content-Type: application/json');
-
-    // echo json_encode($albums);
-
 ?>

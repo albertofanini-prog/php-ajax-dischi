@@ -1,5 +1,5 @@
 <?php
-    include './database.php'
+    include '../VUE/database.php'
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">   
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <title>PHP AJAX Dischi</title>
     <style>
         *{
@@ -56,7 +56,7 @@
 <body>
     <header>
         <div class="header_container">
-            <img src="spotyLogo.png">
+            <img src="../spotyLogo.png">
         </div>
     </header>
     <main>
