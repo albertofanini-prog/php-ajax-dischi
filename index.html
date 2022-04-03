@@ -1,6 +1,3 @@
-<?php
-    include './database.php'
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">   
     <link rel="stylesheet" href="style.css">
-    <title>PHP AJAX Dischi</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>PHP AJAX Dischi Vue</title>
     <style>
         *{
             font-family: 'Poppins', sans-serif;
@@ -54,43 +53,36 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="header_container">
-            <img src="spotyLogo.png">
-        </div>
-    </header>
-    <main>
-        <ul class="album_wrapper">
-            <?php
-                foreach ($albums as $value){
-            ?>
-            <li class="album"> 
-                <img src="<?php echo $value['poster'];?>"/>
-                <h5>
-                    <?php
-                        echo $value['title'];
-                    ?>
-                </h5>
-                <span>
-                    <?php
-                        echo $value['author'];
-                    ?>
-                </span>
-                <span>
-                    <?php
-                        echo $value['genre'];    
-                    ?>
-                </span>
-                <span>
-                    <?php
-                        echo $value['year'];
-                    ?>
-                </span>
-            <?php
-                }
-            ?>
-            </li>
-        </ul>
-    </main>
+    <div id="app">
+        <header>
+            <div class="header_container">
+                <img src="spotyLogo.png">
+            </div>
+        </header>
+        <main>
+            <ul class="album_wrapper">
+                <li v-for="album in albums" class="album"> 
+                    <img :src="album.poster"/>
+
+                    <h5>
+                        {{album.title}}
+                    </h5>
+
+                    <span>
+                        {{album.author}}
+                    </span>
+
+                    <span>
+                        {{album.year}}
+                    </span>
+
+                    <span>
+                    </span>
+                </li>
+            </ul>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
